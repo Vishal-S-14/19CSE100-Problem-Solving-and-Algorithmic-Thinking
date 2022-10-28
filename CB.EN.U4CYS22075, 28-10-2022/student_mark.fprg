@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 11:13:10 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTAtMjg7MDk6MjQ6NDcgQU07MjI2Ng=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTAtMjg7MTE6MTM6MTAgQU07NjsyMzYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables for student information"/>
+            <declare name="Roll, Name, Address, Blood, Department" type="String" array="False" size=""/>
+            <declare name="Phone" type="Integer" array="False" size=""/>
+            <comment text="Gatering basic student information"/>
+            <output expression="&quot;Enter your Roll&quot;" newline="True"/>
+            <input variable="Roll"/>
+            <output expression="&quot;Enter your Name&quot;" newline="True"/>
+            <input variable="Name"/>
+            <output expression="&quot;Enter your Address&quot;" newline="True"/>
+            <input variable="Address"/>
+            <output expression="&quot;Enter your Blood group&quot;" newline="True"/>
+            <input variable="Blood"/>
+            <output expression="&quot;Enter your phone no&quot;" newline="True"/>
+            <input variable="Phone"/>
+            <output expression="&quot;Enter your Department assigned&quot;" newline="True"/>
+            <input variable="Department"/>
+            <comment text="Declaring variables for academic information"/>
+            <declare name="Sem" type="String" array="False" size=""/>
+            <declare name="sub1, sub2, sub3, sub4" type="String" array="False" size=""/>
+            <declare name="marks1, marks2, marks3, marks4, total, avg" type="Real" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR SEMESTER&quot;" newline="True"/>
+            <input variable="Sem"/>
+            <output expression="&quot;ENTER YOUR FIRST SUBJECT&quot;" newline="True"/>
+            <input variable="sub1"/>
+            <output expression="&quot;ENTER YOUR MARKS IN THE SUBJECT&quot;" newline="True"/>
+            <input variable="marks1"/>
+            <output expression="&quot;ENTER YOUR SECOND SUBJECT&quot;" newline="True"/>
+            <input variable="sub2"/>
+            <output expression="&quot;ENTER YOUR MARKS IN THE SUBJECT&quot;" newline="True"/>
+            <input variable="marks2"/>
+            <output expression="&quot;ENTER YOUR THIRD SUBJECT&quot;" newline="True"/>
+            <input variable="sub3"/>
+            <output expression="&quot;ENTER YOUR MARKS IN THE SUBJECT&quot;" newline="True"/>
+            <input variable="marks3"/>
+            <output expression="&quot;ENTER YOUR FOURTH SUBJECT&quot;" newline="True"/>
+            <input variable="sub4"/>
+            <output expression="&quot;ENTER YOUR MARKS IN THE SUBJECT&quot;" newline="True"/>
+            <input variable="marks4"/>
+            <comment text="Calculating total marks and average marks"/>
+            <assign variable="total" expression="marks1+marks2+marks3+marks4"/>
+            <assign variable="avg" expression="total/4"/>
+            <comment text="Final output"/>
+            <output expression="&quot;NAME:&quot;&amp;name" newline="True"/>
+            <output expression="&quot;ROLL NUMBER:&quot;&amp;roll" newline="True"/>
+            <output expression="&quot;DEPARTMENT:&quot;&amp;department" newline="True"/>
+            <output expression="&quot;SEMESTER:&quot;&amp;sem" newline="True"/>
+            <output expression="&quot;TOTAL MARKS OBTAINED BY THE STUDENT IN THREE SUBJECT:&quot;&amp;total" newline="True"/>
+            <output expression="&quot;AVERAGE OBTAINED BY THE STUDENT IN FOUR SUBJECT:&quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
