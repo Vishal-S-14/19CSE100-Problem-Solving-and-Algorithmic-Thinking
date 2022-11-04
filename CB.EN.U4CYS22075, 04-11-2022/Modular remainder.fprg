@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:23:00 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTA6Mzk6MzcgQU07MjI1OA=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTE6MjM6MDAgQU07NDsyMzUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="a is Divident"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter any value for a&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="b is divisor"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter any value for b&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="c is the Quoient"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="a/b"/>
+            <comment text="r is remainder"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <comment text="The value of remainder"/>
+            <assign variable="r" expression="a-(b*c)"/>
+            <output expression="r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:55:33 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTA6MDk6NTIgQU07MjI1Mg=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTA6NTU6MzMgQU07NTsyMzY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables for a,b"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter any value for a&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter any value for b&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="Then write the formula for a,b"/>
+            <assign variable="a" expression="a+b"/>
+            <assign variable="b" expression="a-b"/>
+            <assign variable="a" expression="a-b"/>
+            <comment text="Now using the formula these can be swapped without using third variable"/>
+            <output expression="&quot;The new a is &quot;&amp;a" newline="True"/>
+            <output expression="&quot;The new b is &quot;&amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

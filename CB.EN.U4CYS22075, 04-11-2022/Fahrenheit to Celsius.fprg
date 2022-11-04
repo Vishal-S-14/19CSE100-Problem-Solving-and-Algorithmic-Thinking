@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:54:52 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MDk6MjY6MDMgQU07MjI1NQ=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTA6NTQ6NTIgQU07NDsyMzYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variable for Fahrenheit"/>
+            <declare name="Fahrenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter any value for Fahrenheit&quot;" newline="True"/>
+            <input variable="Fahrenheit"/>
+            <comment text="Gettting information about Celsius"/>
+            <declare name="Celsius" type="Real" array="False" size=""/>
+            <assign variable="Celsius" expression="5/9*(Fahrenheit-32)"/>
+            <comment text="Convert Fahrenheit to Celsius"/>
+            <output expression="&quot;THE CELSIUS IS: &quot;&amp;celsius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

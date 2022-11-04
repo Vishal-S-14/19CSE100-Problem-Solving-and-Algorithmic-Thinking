@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:32:38 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MDk6MDY6NDQgQU07MjI1OA=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTE6MzI6MzggQU07NTsyMzY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variable for C. Here, C is Celsius"/>
+            <declare name="C" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter any value for C&quot;" newline="True"/>
+            <input variable="C"/>
+            <comment text="Getting information about F. Here, F is Fahrenheit"/>
+            <declare name="F" type="Real" array="False" size=""/>
+            <assign variable="F" expression="9/5*(C)+32"/>
+            <output expression="F" newline="True"/>
+            <comment text="Convert Celsius to Fahrenheit"/>
+            <output expression="&quot;THE FAHRENHEIT IS: &quot;&amp;F" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

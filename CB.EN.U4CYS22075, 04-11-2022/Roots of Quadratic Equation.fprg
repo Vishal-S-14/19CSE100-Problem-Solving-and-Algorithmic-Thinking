@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:36:59 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MDk6NDA6NTkgQU07MjI2Mg=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMDQ7MTE6MzY6NTkgQU07NjsyMzcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="a is the coefficent of x^2"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <comment text="b is the coefficient of x"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <comment text="c is the constant"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <comment text="x1 is the root value"/>
+            <declare name="x1" type="Integer" array="False" size=""/>
+            <comment text="x2 is the root value"/>
+            <declare name="x2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter any coefficient of x^2&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter any coefficient value for x&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Enter any constant value for c&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="x1 is"/>
+            <assign variable="x1" expression="-b+sqrt(b^2-4*a*c)/2*a"/>
+            <comment text="x2 is"/>
+            <assign variable="x2" expression="-b-sqrt(b^2-4*a*c)/2*a"/>
+            <comment text="The value of x1&amp;x2"/>
+            <output expression="&quot;THE QUADRATIC EQUATION OF X1 IS &quot;&amp;x1" newline="True"/>
+            <output expression="&quot;THE QUARATIC EQUATION OF X2 IS &quot;&amp;x2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
