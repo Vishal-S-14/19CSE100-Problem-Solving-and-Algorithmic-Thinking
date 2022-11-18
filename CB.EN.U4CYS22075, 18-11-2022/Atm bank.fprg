@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="visha"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:57:24 AM"/>
+        <attribute name="created" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMTg7MDk6MDI6NTggQU07MjI2NA=="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTEtMTg7MTA6NTc6MjQgQU07NDsyMzcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Welcome to our bank"/>
+            <output expression="&quot;Welcome to our Bank&quot;" newline="True"/>
+            <comment text="Enter the language name"/>
+            <declare name="Language" type="String" array="False" size=""/>
+            <output expression="&quot;Please select your Language&quot;" newline="True"/>
+            <input variable="Language"/>
+            <output expression="&quot;Insert your ATM card&quot;" newline="True"/>
+            <output expression="&quot;Enter your 4 digit pin&quot;" newline="True"/>
+            <comment text="Enter the 4-digit secret pin"/>
+            <declare name="Pin" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of pin&quot;" newline="True"/>
+            <input variable="pin"/>
+            <if expression="pin=1234">
+                <then>
+                    <comment text="If verified, welcome back user"/>
+                    <output expression="&quot;Welcome back User&quot;" newline="True"/>
+                    <comment text="Enter the Account number"/>
+                    <declare name="Accno" type="Integer" array="False" size=""/>
+                    <assign variable="Accno" expression="1234567890"/>
+                    <output expression="&quot;Enter the value of Accno&quot;" newline="True"/>
+                    <input variable="Accno"/>
+                    <comment text="Enter the Name"/>
+                    <declare name="Name" type="String" array="False" size=""/>
+                    <output expression="&quot;Enter your name&quot;" newline="True"/>
+                    <input variable="Name"/>
+                    <declare name="Balance" type="Integer" array="False" size=""/>
+                    <assign variable="Balance" expression="20000"/>
+                    <comment text="Balance will be shown"/>
+                    <output expression="&quot;Your balance amount is &quot;&amp;balance" newline="True"/>
+                    <if expression="balance&gt;500">
+                        <then>
+                            <comment text="If balance is more than 500, You can access withdrawl"/>
+                            <output expression="&quot;You can withdraw your money&quot;" newline="True"/>
+                            <comment text="Enter the withdrawal amount&#13;&#10;"/>
+                            <declare name="withdraw" type="Integer" array="False" size=""/>
+                            <output expression="&quot;How much amount of money you are going to withdraw&quot;" newline="True"/>
+                            <input variable="withdraw"/>
+                            <declare name="Rembal" type="Integer" array="False" size=""/>
+                            <assign variable="rembal" expression="balance-withdraw"/>
+                            <comment text="Remaining balance will be shown"/>
+                            <if expression="Rembal&lt;balance">
+                                <then>
+                                    <output expression="&quot;Sorry, you are taking so much amount of money&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;The remaining balance is &quot;&amp;rembal" newline="True"/>
+                                </else>
+                            </if>
+                            <output expression="&quot;Thank you for using our bank&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="If balance is not more than 500, You can't access withdrawl"/>
+                            <output expression="&quot;You can't withdraw your money&quot;" newline="True"/>
+                            <output expression="&quot;Thank you&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="If not, Retry the pin&#13;&#10;"/>
+                    <output expression="&quot;Re-Enter the correct pin&quot;" newline="True"/>
+                    <output expression="&quot;Thank you for using our bank&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
