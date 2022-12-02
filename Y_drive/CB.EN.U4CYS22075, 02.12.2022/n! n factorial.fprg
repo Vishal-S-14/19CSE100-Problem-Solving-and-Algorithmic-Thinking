@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22075"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 04:00:26 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MTsyMDIyLTEyLTAyOzAzOjQzOjUwIEFNOzMzMTI="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MTsyMDIyLTEyLTAyOzA0OjAwOjI2IEFNOzE7MzQxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring Variable"/>
+            <declare name="n, i, factor" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="Initiate the factorial"/>
+            <assign variable="i" expression="1"/>
+            <comment text="Factorial = 1"/>
+            <assign variable="factor" expression="1"/>
+            <while expression="i&lt;=n">
+                <assign variable="factor" expression="factor*i"/>
+                <assign variable="i" expression="i+1"/>
+                <comment text="Factorial Answer"/>
+                <output expression="&quot;factor= &quot;&amp;factor" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

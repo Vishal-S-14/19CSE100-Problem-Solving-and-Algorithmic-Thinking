@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22075"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:44:38 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MTsyMDIyLTEyLTAyOzEwOjI0OjU0IEFNOzMzMTM="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MTsyMDIyLTEyLTAyOzEwOjQ0OjM4IEFNOzE7MzQyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables"/>
+            <declare name="n, a, c, b, x" type="Integer" array="False" size=""/>
+            <comment text="Receiving n value"/>
+            <output expression="&quot;Enter the value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="x" expression="1"/>
+            <comment text="While loop for calculation"/>
+            <while expression="x&lt;=n">
+                <comment text="For loop for calculation"/>
+                <for variable="x" start="1" end="n" direction="inc" step="1">
+                    <assign variable="c" expression="a+b"/>
+                    <comment text="Declaring output"/>
+                    <output expression="a&amp;&quot;+&quot;&amp;b&amp;&quot;=&quot;&amp;c" newline="True"/>
+                    <assign variable="a" expression="b"/>
+                    <assign variable="b" expression="c"/>
+                </for>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
