@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 08:08:08 PM"/>
+        <attribute name="created" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MDk6Mzk6MDIgQU07MjQ5Ng=="/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MTA6MDY6NTYgQU07NDsyNjAy"/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTItMDk7MDg6MDI6MDggUE07MTtIUDtERVNLVE9QLUwzUkRFS0Y7MjAyMi0xMi0wOTswOTozOTowMiBBTTttYXJrc1sxXS5mcHJnOzYyNDg="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjItMTItMDk7MDg6MDg6MDggUE07OTsyMzk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Getting the number of students"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&gt;0">
+                <then>
+                    <comment text="Declaring other Variables"/>
+                    <declare name="sub1, sub2, sub3, sub4, sub5, roll, total, avg" type="Integer" array="True" size="n"/>
+                    <declare name="x, input" type="Integer" array="False" size=""/>
+                    <for variable="x" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="Getting the Roll number"/>
+                        <output expression="&quot;Enter roll number of stundent &quot;&amp;x+1" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="roll[x]" expression="input"/>
+                        <comment text="Getting for 5 Subjects"/>
+                        <output expression="&quot;Enter marks of stundent in maths&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="sub1[x]" expression="input"/>
+                        <output expression="&quot;Enter marks of stundent in social studies&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="sub2[x]" expression="input"/>
+                        <output expression="&quot;Enter marks of stundent in physics&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="sub3[x]" expression="input"/>
+                        <output expression="&quot;Enter marks of stundent in chemistry&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="sub4[x]" expression="input"/>
+                        <output expression="&quot;Enter marks of stundent in english&quot;" newline="True"/>
+                        <input variable="input"/>
+                        <assign variable="sub5[x]" expression="input"/>
+                        <comment text="Calculating for Total marks"/>
+                        <assign variable="total[x]" expression="sub1[x]+sub2[x]+sub3[x]+sub4[x]+sub5[x]"/>
+                        <comment text="Calculating for Average marks"/>
+                        <assign variable="avg[x]" expression="total[x]/5"/>
+                    </for>
+                    <for variable="x" start="0" end="n-1" direction="inc" step="1">
+                        <comment text="Output for final values"/>
+                        <output expression="&quot;Roll number of the student :&quot;&amp;roll[x]" newline="True"/>
+                        <output expression="&quot;Marks of the student :&quot;&amp;sub1[x]&amp;&quot;, &quot;&amp;sub2[x]&amp;&quot;, &quot;&amp;sub3[x]&amp;&quot;, &quot;&amp;sub4[x]&amp;&quot;, &quot;&amp;sub5[x]" newline="True"/>
+                        <output expression="&quot;total marks of the student :&quot;&amp;total[x]" newline="True"/>
+                        <output expression="&quot;Average marks of the student :&quot;&amp;avg[x]" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;The number of students cannot be less than 1&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
