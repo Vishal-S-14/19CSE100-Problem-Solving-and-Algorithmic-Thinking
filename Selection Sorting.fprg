@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22075"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:53:46 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MzsyMDIzLTAxLTIwOzA5OjA2OjE2IEFNOzMzMjA="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA3NTsyMDIyMjNNQVlDMDA3MzsyMDIzLTAxLTIwOzEwOjUzOjQ2IEFNOzI7MzQyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring Variables"/>
+            <declare name="n, i, j, s, t" type="Integer" array="False" size=""/>
+            <comment text="Assigning the number of value"/>
+            <output expression="&quot;Enter the number of value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x" type="Integer" array="True" size="n"/>
+            <comment text="For loop for entering the array of numbers"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter the number &quot; &amp;i+1" newline="True"/>
+                <input variable="x[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <comment text="Initialising that t=i"/>
+                <assign variable="t" expression="i"/>
+                <for variable="j" start="t+1" end="n-1" direction="inc" step="1">
+                    <comment text="Comparing t and j using If statement "/>
+                    <if expression="x[t]&gt;x[j]">
+                        <then>
+                            <comment text="If t&gt;j, Then t=j"/>
+                            <assign variable="t" expression="j"/>
+                        </then>
+                        <else>
+                            <comment text="If t&lt;j, then t=i"/>
+                        </else>
+                    </if>
+                </for>
+                <comment text="x is initialised"/>
+                <assign variable="s" expression="x[t]"/>
+                <assign variable="x[t]" expression="x[i]"/>
+                <assign variable="x[i]" expression="s"/>
+                <comment text="Declaring Output"/>
+                <output expression="s" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
