@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 11:04:20 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDowODoxOCBQTTsyNjMw"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDo0OTowNiBQTTsyOzI3NDE="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjMtMDEtMjc7MTE6MDQ6MjAgUE07MTsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;FACTORIAL CALCULATOR&quot;" newline="True"/>
+            <comment text="Recieving the value of n"/>
+            <output expression="&quot;Enter number n&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&lt;=0">
+                <then>
+                    <comment text="For other case"/>
+                    <output expression="&quot;Enter a valid natural number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="With the help of comptproduct to find factorial"/>
+                    <output expression="&quot;The factorial of the given number is &quot;&amp;comptproduct(n)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="comptproduct" type="Integer" variable="Factor">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Factor" type="Integer" array="False" size=""/>
+            <comment text="Conditions for n=1 and others"/>
+            <if expression="n=1">
+                <then>
+                    <comment text="For Normal Cases"/>
+                    <assign variable="Factor" expression="1"/>
+                </then>
+                <else>
+                    <comment text="Comptproduct using recursion"/>
+                    <assign variable="Factor" expression="comptproduct(n-1)*n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 10:59:59 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDowMjoxNiBQTTsyNjIy"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDo1MDozNyBQTTszOzI3Mzg="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjMtMDEtMjc7MTA6NTk6NTkgUE07MjsyMzkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring Variable"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;SUM OF N NATURAL NUMBERS&quot;" newline="True"/>
+            <comment text="Recieving the value of n"/>
+            <output expression="&quot;Enter n&quot;" newline="True"/>
+            <input variable="n"/>
+            <if expression="n&lt;=0">
+                <then>
+                    <comment text="For other cases"/>
+                    <output expression="&quot;Please enter a natural number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="With the help of comptesum function to find sum"/>
+                    <output expression="&quot;Sum of &quot;&amp;&quot; &quot;&amp;n&amp;&quot; natural numbers is &quot;&amp;comptsum(n)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="comptsum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <comment text="Using if condition for n=1 and others"/>
+            <if expression="n==1">
+                <then>
+                    <comment text="For base case"/>
+                    <assign variable="sum" expression="1"/>
+                </then>
+                <else>
+                    <comment text="Using recursion to find sum"/>
+                    <assign variable="sum" expression="comptsum(n-1)+n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
