@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 11:12:20 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDoxMjoyNSBQTTsyNjIz"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLTAzUk41UTg7MjAyMy0wMS0yNzsxMDo0NTowMCBQTTs0OzI3MzM="/>
+        <attribute name="edited" value="dmlzaGE7VklTSEFMOzIwMjMtMDEtMjc7MTE6MTI6MjAgUE07MjsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring the variables"/>
+            <output expression="&quot;FIBONACCI SERIES&quot;" newline="True"/>
+            <declare name="n, i, x, y" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number of terms&quot;" newline="True"/>
+            <comment text="Recieving numbers"/>
+            <input variable="n"/>
+            <output expression="&quot;Fibonacci series is &quot;" newline="True"/>
+            <if expression="n&gt;2">
+                <then>
+                    <comment text="n&gt;2"/>
+                    <comment text="For first 2 terms"/>
+                    <output expression="&quot;0&quot;" newline="True"/>
+                    <output expression="&quot;1&quot;" newline="True"/>
+                    <comment text="From 3rd term"/>
+                    <for variable="i" start="1" end="n-2" direction="inc" step="1">
+                        <output expression="fibonacci(i)" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <if expression="n=2">
+                        <then>
+                            <comment text="For n=2"/>
+                            <assign variable="x" expression="0"/>
+                            <assign variable="y" expression="1"/>
+                            <output expression="x" newline="True"/>
+                            <output expression="y" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="n=1">
+                                <then>
+                                    <comment text="For n=1"/>
+                                    <assign variable="x" expression="0"/>
+                                    <output expression="x" newline="True"/>
+                                </then>
+                                <else>
+                                    <comment text="For any other value of n"/>
+                                    <output expression="&quot;Please enter a valid n&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="fibonacci" type="Integer" variable="Answer">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Answer" type="Integer" array="False" size=""/>
+            <comment text="Conditions for n&gt;2 "/>
+            <if expression="n&gt;2">
+                <then>
+                    <comment text="Using recursion to find the result"/>
+                    <assign variable="Answer" expression="fibonacci(n-1)+fibonacci(n-2)"/>
+                </then>
+                <else>
+                    <comment text="For base cases"/>
+                    <assign variable="Answer" expression="n"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
